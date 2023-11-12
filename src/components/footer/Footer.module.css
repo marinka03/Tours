@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    padding: 10px 22px;
+    border: 2px solid rgb(194, 216, 0);
+}
+.dark{
+    background-color: #000;
+    color: #d8a4a4;
+    /* border: 2px solid #0b025f; */
+}
+.light{
+    background-color: #fff;
+    color: rgb(53, 3, 3);
+    /* border: 2px solid #000; */
+}

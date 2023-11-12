@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px; */
+    padding: 10px 22px;
+}
+.nav{
+    display: flex;
+    justify-content:right;
+    align-items:center;
+    gap: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.theme-btn{
+    font-weight: bold;
+    border: 2px solid brown;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+.dark{
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #0b025f;
+}
+.light{
+    background-color: #fff;
+    color: rgb(150, 0, 0);
+    border: 2px solid #000;
+}
+.logInBtn{
+    border-radius: 4px;
+    background-color: rgb(150, 0, 0);
+    color: #fff;
+    cursor: pointer;
+}
+/* .theme-btn{
+    border: 1px solid rgb(150, 0, 0);
+    border-radius: 10px;
+} */
