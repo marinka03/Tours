@@ -1,12 +1,12 @@
 // import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+// import { ModalProvider } from 'styled-react-modal'
 // import Rodal from 'rodal';
 
 import Header from './header/Header';
 import Tours from './tours/Tours';
 import Footer from './footer/Footer';
-import LogIn from './log-in/LogIn';
-
+import CanvasDots from './canvas-dots/CanvasDots';
 
 class App extends Component {
   state = {
@@ -20,16 +20,12 @@ class App extends Component {
       [e.target.name]: this.state.currentTheme === 'dark' ? 'light' : 'dark',
     });
   };
-  onClickLogInBtn = e =>{
-    // console.log(e.target.name)
-    this.setState({visible: this.state.visible? false:true})
-    // console.log(this.state.visible)
-  }
- 
+  onClickLogInBtn = e => {
+    this.setState({ visible: this.state.visible ? false : true });
+  };
 
   render() {
     const { currentTheme } = this.state;
-    console.log(this.state.visible)
     return (
       <div>
         <Header
@@ -37,16 +33,20 @@ class App extends Component {
           currentTheme={currentTheme}
           onClickLogIn={this.onClickLogInBtn}
         />
-        <Tours currentTheme={currentTheme}></Tours>
+
+        <Tours currentTheme={currentTheme}>
+          <CanvasDots position="up" />
+          <CanvasDots position="down" />
+        </Tours>
         <Footer currentTheme={currentTheme}></Footer>
-        <LogIn onClickLogInBtn={this.onClickLogInBtn} visible={this.state.visible}></LogIn>
+
       </div>
     );
   }
 }
-
-// App.propTypes = {
-
-// }
+// {/* <LogIn
+// onClickLogInBtn={this.onClickLogInBtn}
+// visible={this.state.visible}
+// ></LogIn> */}
 
 export default App;

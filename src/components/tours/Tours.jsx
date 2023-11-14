@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import style from '../tours/Tours.module.css';
+import TourItem from 'components/tour-item/TourItem';
 
 const TOURS = [
   {
@@ -41,7 +42,7 @@ const TOURS = [
   },
 ];
 
-function Tours({ currentTheme }) {
+function Tours({ currentTheme, children }) {
   return (
    <>
     
@@ -53,14 +54,10 @@ function Tours({ currentTheme }) {
     >
      
       <p>Quantity</p>
+      {children}
       <ul className={style.list}>
         {TOURS.map(({ id, name, price, days, description }) => (
-          <li key={id} className={style.card}>
-            <h2 className={style.title}>Name: {name}</h2>
-            <h3 className={style.days}>Days: {days}</h3>
-            <h3 className={style.price}>Price: from £{price}</h3>
-            <p className={style.description}>Description: {description}</p>
-          </li>
+          <TourItem key={id} name={name} price={price} days={days} description={description} currentTheme={currentTheme}/>
         ))}
       </ul>
     </div></>

@@ -1,0 +1,23 @@
+.card {
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px auto 0 auto;
+  /* background-color: beige; */
+  max-width: 600px;
+  min-width: 200px;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: rgba(175, 115, 115, 0.16) 0px 3px 6px,
+    rgba(158, 93, 93, 0.23) 0px 3px 6px;
+}
+.dark {
+  background-color: #FF7800;
+  color: #000;
+  border: 2px solid #eec5c5;
+}
+.light {
+  color: #000;
+  background-color: #FFF1BB;
+}
