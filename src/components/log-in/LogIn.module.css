@@ -1,0 +1,10 @@
+.modal {
+  position: relative;
+}
+.log-in-form {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+  gap: 10px;
+}

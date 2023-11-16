@@ -3,12 +3,13 @@ import clsx from 'clsx';
 import style from '../footer/Footer.module.css';
 
 const Footer = ({ currentTheme }) => {
-  // console.log('hello from footer', currentTheme);
   return (
-    <footer className={clsx(style.footer, {
-      [style.dark]: currentTheme === 'dark',
-      [style.light]: currentTheme === 'light',
-    })}>
+    <footer
+      className={clsx(style.footer, {
+        [style.dark]: currentTheme === 'dark',
+        [style.light]: currentTheme === 'light',
+      })}
+    >
       Footer
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
@@ -28,12 +29,6 @@ const Footer = ({ currentTheme }) => {
         necessitatibus provident ullam quibusdam soluta. At magnam ab
         repudiandae autem voluptate doloribus impedit facilis eos soluta
         assumenda. Ex ratione sunt optio! Blanditiis, doloribus! Eos eum
-        consequatur voluptas, est consectetur nulla cupiditate praesentium esse
-        quibusdam aliquam beatae quaerat, corrupti omnis eius numquam ipsam
-        officia quae excepturi laboriosam magni! Accusantium asperiores deserunt
-        laboriosam odio, aut quis beatae cupiditate, harum qui at sapiente culpa
-        assumenda repellendus neque ratione ut soluta pariatur provident quas id
-        rerum nemo tempore itaque dolore! Rerum.
       </p>
     </footer>
   );

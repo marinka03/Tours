@@ -1,52 +1,40 @@
 // import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-// import { ModalProvider } from 'styled-react-modal'
-// import Rodal from 'rodal';
+import React, { useState } from 'react';
 
 import Header from './header/Header';
 import Tours from './tours/Tours';
 import Footer from './footer/Footer';
 import CanvasDots from './canvas-dots/CanvasDots';
+import LogIn from './log-in/LogIn';
 
-class App extends Component {
-  state = {
-    visible: false,
-    currentTheme: 'light',
+const App = () => {
+  const [visible, setVisible] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState('light');
+
+  const onChangeTheme = e => {
+    setCurrentTheme(prevState => (prevState === 'dark' ? 'light' : 'dark'));
+  };
+  const toggleOpenModal = () => {
+    setVisible(prevState => (prevState === false ? true : false));
   };
 
-  onChangeTheme = e => {
-    console.dir(e.target.name);
-    this.setState({
-      [e.target.name]: this.state.currentTheme === 'dark' ? 'light' : 'dark',
-    });
-  };
-  onClickLogInBtn = e => {
-    this.setState({ visible: this.state.visible ? false : true });
-  };
-
-  render() {
-    const { currentTheme } = this.state;
-    return (
-      <div>
-        <Header
-          onChangeTheme={this.onChangeTheme}
-          currentTheme={currentTheme}
-          onClickLogIn={this.onClickLogInBtn}
-        />
-
-        <Tours currentTheme={currentTheme}>
-          <CanvasDots position="up" />
-          <CanvasDots position="down" />
-        </Tours>
-        <Footer currentTheme={currentTheme}></Footer>
-
-      </div>
-    );
-  }
-}
-// {/* <LogIn
-// onClickLogInBtn={this.onClickLogInBtn}
-// visible={this.state.visible}
-// ></LogIn> */}
+  return (
+    <div>
+      <Header
+        onChangeTheme={onChangeTheme}
+        currentTheme={currentTheme}
+        toggleOpenModal={toggleOpenModal}
+      ></Header>
+      {visible === true && (
+        <LogIn toggleOpenModal={toggleOpenModal} visible={visible}></LogIn>
+      )}
+      <Tours currentTheme={currentTheme}>
+        <CanvasDots position="up" />
+        <CanvasDots position="down" />
+      </Tours>
+      <Footer currentTheme={currentTheme}></Footer>
+    </div>
+  );
+};
 
 export default App;

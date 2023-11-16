@@ -2,13 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px; */
   padding: 10px 22px;
 }
-.logo{
-    color: #FF7800;
-    font-weight: 600;
+.logo {
+  color: #ff7800;
+  font-weight: 600;
 }
 .nav {
   display: flex;
@@ -18,11 +16,10 @@
   font-weight: 600;
   text-transform: uppercase;
 }
-.buttons{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .theme-btn {
   font-weight: bold;
@@ -42,14 +39,10 @@
 }
 .logInBtn {
   border-radius: 4px;
-  background-color: #FF7800;
+  background-color: #ff7800;
   border: 2px solid black;
   color: #000;
   cursor: pointer;
   width: 60px;
   height: 23px;
 }
-/* .theme-btn{
-    border: 1px solid rgb(150, 0, 0);
-    border-radius: 10px;
-} */

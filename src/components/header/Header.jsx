@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import style from '../header/Header.module.css';
 
-function Header({ onChangeTheme, currentTheme, onClickLogIn }) {
+function Header({ onChangeTheme, currentTheme, toggleOpenModal }) {
   return (
     <header
       className={clsx(style.header, {
@@ -16,16 +16,22 @@ function Header({ onChangeTheme, currentTheme, onClickLogIn }) {
         <p className={style.favouriteTours}>Favourite tours</p>
         <p className={style.contactUs}>Contact us</p>
       </nav>
-     <div className={style.buttons}> <button
-        name="currentTheme"
-        className={style['theme-btn']}
-        onClick={onChangeTheme}
-      >
-        {currentTheme}
-      </button>
-      <button className={style.logInBtn} name="logInBtn" onClick={onClickLogIn}>
-        Log in
-      </button></div>
+      <div className={style.buttons}>
+        <button
+          name="currentTheme"
+          className={style['theme-btn']}
+          onClick={onChangeTheme}
+        >
+          {currentTheme}
+        </button>
+        <button
+          className={style.logInBtn}
+          name="logInBtn"
+          onClick={toggleOpenModal}
+        >
+          Log in
+        </button>
+      </div>
     </header>
   );
 }

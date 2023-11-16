@@ -44,23 +44,29 @@ const TOURS = [
 
 function Tours({ currentTheme, children }) {
   return (
-   <>
-    
-    <div
-      className={clsx(style.container, {
-        [style.dark]: currentTheme === 'dark',
-        [style.light]: currentTheme === 'light',
-      })}
-    >
-     
-      <p>Quantity</p>
-      {children}
-      <ul className={style.list}>
-        {TOURS.map(({ id, name, price, days, description }) => (
-          <TourItem key={id} name={name} price={price} days={days} description={description} currentTheme={currentTheme}/>
-        ))}
-      </ul>
-    </div></>
+    <>
+      <div
+        className={clsx(style.container, {
+          [style.dark]: currentTheme === 'dark',
+          [style.light]: currentTheme === 'light',
+        })}
+      >
+        <p>Quantity</p>
+        {children}
+        <ul className={style.list}>
+          {TOURS.map(({ id, name, price, days, description }) => (
+            <TourItem
+              key={id}
+              name={name}
+              price={price}
+              days={days}
+              description={description}
+              currentTheme={currentTheme}
+            />
+          ))}
+        </ul>
+      </div>
+    </>
   );
 }
 

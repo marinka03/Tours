@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import style from '../tour-item/TourItem.module.css';
 
-function TourItem({ id, name, price, days, description, currentTheme }) {
+function TourItem({ name, price, days, description, currentTheme }) {
   return (
     <li
       className={clsx(style.card, {

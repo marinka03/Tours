@@ -1,20 +1,10 @@
-/* .dark{
-    background-color: #000;
-    color: #fff;
-    border: 2px solid #0b025f;
+.canvasUp {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
 }
-.light{
-    background-color: #fff;
-    color: rgb(150, 0, 0);
-    border: 2px solid #000;
-} */
-.canvasUp{
-    position: absolute;
-    top:4rem;
-    right: 2rem;
-}
-.canvasDown{
-    position: absolute;
-    bottom: 4rem;
-    left: 2rem;
+.canvasDown {
+  position: absolute;
+  bottom: 4rem;
+  left: 2rem;
 }
