@@ -1,11 +1,13 @@
 // import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-
 import Header from './header/Header';
 import Tours from './tours/Tours';
 import Footer from './footer/Footer';
 import CanvasDots from './canvas-dots/CanvasDots';
+// import BookBtn from './book-btn/BookBtn';
 import LogIn from './log-in/LogIn';
+// import { ThemeProvider } from 'styled-components';
+
 
 const App = () => {
   const [visible, setVisible] = useState(false);

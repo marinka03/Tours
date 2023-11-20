@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import style from '../footer/Footer.module.css';
+import style from '../footer/_Footer.module.scss';
 
 const Footer = ({ currentTheme }) => {
   return (

@@ -1,0 +1,63 @@
+@import '../../../public/variables.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 22px;
+}
+.logo {
+  color: map-get($colors, 'orange-accent');
+  font-weight: 600;
+}
+.nav {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.theme-btn {
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.dark {
+  background-color: map-get($bg-color, 'black' );
+  color: #eec5c5;
+  border-bottom: 2px solid #eec5c5;
+}
+.light {
+  background-color: #fff;
+  color: rgb(150, 0, 0);
+  border-bottom: 2px solid #000;
+}
+.logInBtn {
+  border-radius: map-get($br, 'base');
+  background-color: map-get($colors, 'orange-accent');
+  border: none;
+  color: map-get($text-color, 'black');
+  cursor: pointer;
+  padding: 4px 12px;
+}
+.logInBtn:hover{
+  box-shadow: map-get($shadow, 'light' );
+}
+
+// .light {
+//   &.card {
+
+//   }
+// }
+
+// .dark {
+//   &.card {
+
+//   }
+// }

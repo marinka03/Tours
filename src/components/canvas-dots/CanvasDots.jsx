@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import style from '../canvas-dots/CanvasDots.module.css';
+import style from '../canvas-dots/_CanvasDots.module.scss';
 
 const updateCanvas = ctx => {
   for (let i = 0; i < 10; i++) {

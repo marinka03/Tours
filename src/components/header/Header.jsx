@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import style from '../header/Header.module.css';
+import style from '../header/_Header.module.scss';
 
 function Header({ onChangeTheme, currentTheme, toggleOpenModal }) {
   return (
@@ -12,9 +12,9 @@ function Header({ onChangeTheme, currentTheme, toggleOpenModal }) {
     >
       <span className={style.logo}>Logo</span>
       <nav className={style.nav}>
-        <p className={style.home}>Home</p>
         <p className={style.favouriteTours}>Favourite tours</p>
         <p className={style.contactUs}>Contact us</p>
+        <p className={style.home}>Home</p>
       </nav>
       <div className={style.buttons}>
         <button
@@ -29,7 +29,7 @@ function Header({ onChangeTheme, currentTheme, toggleOpenModal }) {
           name="logInBtn"
           onClick={toggleOpenModal}
         >
-          Log in
+          <b>Log in</b>
         </button>
       </div>
     </header>

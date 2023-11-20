@@ -1,6 +1,6 @@
 import React from 'react';
 import Rodal from 'rodal';
-import style from '../log-in/LogIn.module.css';
+import style from '../log-in/_LogIn.module.scss';
 import '../../../node_modules/rodal/lib/rodal.css';
 
 const LogIn = ({ toggleOpenModal, visible }) => {
@@ -13,13 +13,18 @@ const LogIn = ({ toggleOpenModal, visible }) => {
         animation={'flip'}
       >
         <div>
-          <p>Log in modal</p>
-          <form action="submit" className={style['log-in-form']}>
-            <label htmlFor="user-name">Name:</label>
-            <input type="text" name="user-name" />
+          <p>Log in</p>
+          <form action="submit" className={style['form']}>
+            <label htmlFor="user-name" className={style.label}>
+              <b>Name:</b>
+              <input type="text" name="user-name" />
+            </label>
 
-            <label htmlFor="user-email">Email:</label>
-            <input type="email" name="user-email" />
+            <label htmlFor="user-email" className={style.label}>
+              <b>Email:</b>
+              <input type="email" name="user-email" />
+            </label>
+            
           </form>
         </div>
       </Rodal>

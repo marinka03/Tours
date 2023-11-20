@@ -1,0 +1,23 @@
+@import '../../../public/variables';
+@import '../../../public/mixins';
+
+.contact-btn {
+  @include flexContainer;
+  gap: 12px;
+  border-radius: 4px;
+  background-color: #98f432;
+  border: 2px solid #000;
+  color: map-get($text-color, 'black');
+  cursor: pointer;
+  padding: 12px 42px;
+  text-transform: uppercase;
+}
+.dark {
+  border: none;
+}
+.dark:hover {
+  box-shadow: map-get($shadow, 'light');
+}
+.light:hover {
+  box-shadow: map-get($shadow, 'main');
+}

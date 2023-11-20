@@ -1,0 +1,26 @@
+@import '../../../public/variables.scss';
+
+.card {
+  // border: map-get($border, 'slim-black');
+  border-radius: 8px;
+  padding: 16px;
+  margin: 0 auto 20px auto;
+  max-width: 600px;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: #ff7800;
+  color: map-get($text-color, 'black');
+}
+.dark:hover{
+  box-shadow: map-get($shadow, 'light' );
+}
+.light {
+  color: map-get($text-color, 'black');
+  background-color: #fff1bb;
+}
+.light:hover{
+  box-shadow: map-get($shadow, 'main' );
+}

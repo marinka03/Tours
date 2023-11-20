@@ -1,0 +1,42 @@
+@import '../../../public/variables';
+
+.container {
+  padding: 50px 15px;
+  position: relative;
+  width: auto;
+  min-height: 1200px;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+}
+.list {
+  position: sticky;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.contacts {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  right: 2%;
+  top: 50%;
+}
+.text-contact {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.dark {
+  background-color: map-get($bg-color, 'primary-dark');
+  color: map-get($text-color , 'light-pink');
+}
+.light {
+  color: map-get($text-color, 'black');
+  background-color: map-get($bg-color, 'primary-light');
+}

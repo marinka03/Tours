@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import style from '../tour-item/TourItem.module.css';
+import style from '../tour-item/_TourItem.module.scss';
 
 function TourItem({ name, price, days, description, currentTheme }) {
   return (

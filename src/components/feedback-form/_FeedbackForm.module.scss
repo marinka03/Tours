@@ -1,0 +1,25 @@
+@import '../../../public/variables.scss';
+
+.form {
+  display: inline-flex;
+  gap: 15px;
+  flex-direction: column;
+  padding: 20px 40px;
+  border: 1px solid #000;
+  background-color: antiquewhite;
+  z-index: 4;
+}
+.send-btn {
+  padding: 5px 12px;
+  cursor: pointer;
+  background-color: #98f432;
+}
+.phone {
+  padding: 5px;
+}
+.dark {
+  color: map-get($text-color, 'black');
+}
+//   .light {
+//     color: map-get($text-color, 'black' );
+//   }
