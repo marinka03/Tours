@@ -24,7 +24,6 @@ const LogIn = ({ toggleOpenModal, visible }) => {
               <b>Email:</b>
               <input type="email" name="user-email" />
             </label>
-            
           </form>
         </div>
       </Rodal>

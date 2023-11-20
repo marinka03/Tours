@@ -34,7 +34,7 @@
 }
 .dark {
   background-color: map-get($bg-color, 'primary-dark');
-  color: map-get($text-color , 'light-pink');
+  color: map-get($text-color, 'light-pink');
 }
 .light {
   color: map-get($text-color, 'black');

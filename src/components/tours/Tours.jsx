@@ -1,23 +1,19 @@
 import React from 'react';
 import clsx from 'clsx';
 import { LuPhone } from 'react-icons/lu';
+
 import tours from '../../../src/tours.json';
-import style from '../tours/_Tours.module.scss';
+
 import TourItem from 'components/tour-item/TourItem';
 import ContactBtn from 'components/contact-btn/ContactBtn';
 import FeedbackForm from 'components/feedback-form/FeedbackForm';
 
+import style from '../tours/_Tours.module.scss';
+
 function Tours({ currentTheme, children }) {
-  // const formRef = useRef();
-  const scrollToForm=()=>{
-    // const dims = formRef.current.getBoundingClientRect()
-    // console.log(dims)
-    // window.scrollBy({
-    //   top: dims.top,
-    //   behavior: "smooth",
-    // })
-    window.scrollBy({left:0, top:window.innerHeight, behavior: 'smooth'});
-  }
+  const scrollToForm = () => {
+    window.scrollBy({ left: 0, top: window.innerHeight, behavior: 'smooth' });
+  };
 
   return (
     <>

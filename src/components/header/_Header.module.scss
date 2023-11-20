@@ -29,7 +29,7 @@
   cursor: pointer;
 }
 .dark {
-  background-color: map-get($bg-color, 'black' );
+  background-color: map-get($bg-color, 'black');
   color: #eec5c5;
   border-bottom: 2px solid #eec5c5;
 }
@@ -46,18 +46,6 @@
   cursor: pointer;
   padding: 4px 12px;
 }
-.logInBtn:hover{
-  box-shadow: map-get($shadow, 'light' );
+.logInBtn:hover {
+  box-shadow: map-get($shadow, 'light');
 }
-
-// .light {
-//   &.card {
-
-//   }
-// }
-
-// .dark {
-//   &.card {
-
-//   }
-// }
