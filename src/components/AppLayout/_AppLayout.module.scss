@@ -1,0 +1,27 @@
+@import '../../../public/variables';
+.main-container {
+  padding: 50px 15px;
+  position: relative;
+  width: 100%;
+  min-height: 1200px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.layout-container {
+  margin: 0 auto;
+  flex-direction: column;
+}
+.dark {
+  background-color: map-get($bg-color, 'primary-dark');
+  color: map-get($text-color, 'light-pink');
+}
+.light {
+  color: map-get($text-color, 'black');
+  background-color: map-get($bg-color, 'primary-light');
+}

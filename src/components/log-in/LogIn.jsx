@@ -10,7 +10,10 @@ const LogIn = ({ toggleOpenModal, visible }) => {
         visible={visible}
         onClose={toggleOpenModal}
         closeOnEsc={true}
-        animation={'flip'}
+        animation={'slideUp'}
+        width={400}
+        height={400}
+        duration={400}
       >
         <div>
           <p>Log in</p>

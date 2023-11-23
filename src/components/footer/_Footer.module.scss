@@ -4,9 +4,17 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  // gap: 50px;
+  padding: 15px 22px;
+  border-top: 3px solid rgb(150, 0, 0);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1500px;
   gap: 50px;
-  padding: 10px 22px;
-  border: 3px solid rgb(150, 0, 0);
 }
 .dark {
   background-color: #000;

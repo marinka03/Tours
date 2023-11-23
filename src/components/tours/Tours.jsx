@@ -1,5 +1,5 @@
 import React from 'react';
-import clsx from 'clsx';
+// import clsx from 'clsx';
 import { LuPhone } from 'react-icons/lu';
 
 import tours from '../../../src/tours.json';
@@ -17,30 +17,22 @@ function Tours({ currentTheme, children }) {
 
   return (
     <>
-      <div
-        className={clsx(style.container, {
-          [style.dark]: currentTheme === 'dark',
-          [style.light]: currentTheme === 'light',
-        })}
-      >
-        <p>Quantity</p>
-        {children}
-        <div className={style.wrapper}>
-          <ul className={style.list}>
-            {tours.map(el => (
-              <TourItem {...el} key={el.id} currentTheme={currentTheme} />
-            ))}
-          </ul>
-          <div className={style.contacts}>
-            <p className={style['text-contact']}>
-              Contact the manager for details
-            </p>
-            <ContactBtn scrollToForm={scrollToForm} currentTheme={currentTheme}>
-              <LuPhone size={20} />
-            </ContactBtn>
-          </div>
-          <FeedbackForm currentTheme={currentTheme}></FeedbackForm>
+      {children}
+      <div className={style.wrapper}>
+        <ul className={style.list}>
+          {tours.map(el => (
+            <TourItem {...el} key={el.id} currentTheme={currentTheme} />
+          ))}
+        </ul>
+        <div className={style.contacts}>
+          <p className={style['text-contact']}>
+            Contact the manager for details
+          </p>
+          <ContactBtn scrollToForm={scrollToForm} currentTheme={currentTheme}>
+            <LuPhone size={20} />
+          </ContactBtn>
         </div>
+        <FeedbackForm currentTheme={currentTheme}></FeedbackForm>
       </div>
     </>
   );

@@ -1,11 +1,5 @@
 @import '../../../public/variables';
 
-.container {
-  padding: 50px 15px;
-  position: relative;
-  width: auto;
-  min-height: 1200px;
-}
 .wrapper {
   display: flex;
   justify-content: center;
@@ -32,11 +26,11 @@
   text-transform: uppercase;
   font-size: 16px;
 }
-.dark {
-  background-color: map-get($bg-color, 'primary-dark');
-  color: map-get($text-color, 'light-pink');
-}
-.light {
-  color: map-get($text-color, 'black');
-  background-color: map-get($bg-color, 'primary-light');
-}
+// .dark {
+//   background-color: map-get($bg-color, 'primary-dark');
+//   color: map-get($text-color, 'light-pink');
+// }
+// .light {
+//   color: map-get($text-color, 'black');
+//   background-color: map-get($bg-color, 'primary-light');
+// }

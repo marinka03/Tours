@@ -1,13 +1,16 @@
 // import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import Header from './header/Header';
-import Tours from './tours/Tours';
-import Footer from './footer/Footer';
-import CanvasDots from './canvas-dots/CanvasDots';
-// import BookBtn from './book-btn/BookBtn';
-import LogIn from './log-in/LogIn';
-// import { ThemeProvider } from 'styled-components';
-
+// import Header from './header/Header';
+// import Tours from './tours/Tours';
+// import Footer from './footer/Footer';
+// import CanvasDots from './canvas-dots/CanvasDots';
+// import LogIn from './log-in/LogIn';
+import { Route, Routes } from 'react-router-dom';
+import GlobalStyle from 'components/GlobalStyles';
+import Home from 'pages/HomePage';
+import About from 'pages/AboutPage';
+import ToursPage from 'pages/ToursPage';
+import AppLayout from './AppLayout/AppLayout';
 
 const App = () => {
   const [visible, setVisible] = useState(false);
@@ -22,7 +25,29 @@ const App = () => {
 
   return (
     <div>
-      <Header
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <AppLayout
+              onChangeTheme={onChangeTheme}
+              currentTheme={currentTheme}
+              toggleOpenModal={toggleOpenModal}
+              visible={visible}
+            />
+          }
+        >
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route
+            path="tours"
+            element={<ToursPage currentTheme={currentTheme} />}
+          />
+        </Route>
+        <Route path="*" element={<Home />} />
+      </Routes>
+      <GlobalStyle />
+      {/* <Header
         onChangeTheme={onChangeTheme}
         currentTheme={currentTheme}
         toggleOpenModal={toggleOpenModal}
@@ -34,9 +59,10 @@ const App = () => {
         <CanvasDots position="up" />
         <CanvasDots position="down" />
       </Tours>
-      <Footer currentTheme={currentTheme}></Footer>
+      <Footer currentTheme={currentTheme}></Footer> */}
     </div>
   );
 };
 
 export default App;
+// http://localhost:3000/Tours

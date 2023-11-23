@@ -10,7 +10,7 @@
 }
 
 .dark {
-  background-color: #ff7800;
+  background-color: map-get($colors, 'orange-accent' );
   color: map-get($text-color, 'black');
 }
 .dark:hover {
